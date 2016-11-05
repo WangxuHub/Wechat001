@@ -62,12 +62,12 @@
     <Content Include="BatteryLog.aspx" />
     <Content Include="BatteryStart.aspx" />
     <Content Include="PayDetail.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Resource\Css\animate.min.css" />
     <Content Include="Resource\Css\app.css" />
     <Content Include="HtmlPage1.html" />
     <Content Include="packages.config" />
     <Content Include="RechargeLog.aspx" />
-    <Content Include="Register.html" />
     <Content Include="Resource\Images\down-detail.png" />
     <Content Include="Resource\Images\chongzhi-icon.png" />
     <Content Include="Resource\Images\daoxun-icon.png" />
@@ -165,6 +165,13 @@
     </Compile>
     <Compile Include="RechargeLog.aspx.designer.cs">
       <DependentUpon>RechargeLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\MobileHead.ascx.cs">
       <DependentUpon>MobileHead.ascx</DependentUpon>
