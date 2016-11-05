@@ -30,13 +30,24 @@
             width:275px;
             height:40px;
             background-color:#1b9de6;
+            border:none;
+            border-radius:5px;
+            color:white;
+        }
+
+        .app-title {
+            width:100%;
+            height:90px;
+            text-align:center;
+            padding-top:33px;
+            font-family:'Microsoft Yahei';
         }
 
     </style>
 </head>
 <body>
     <div id="vue-app">
-        <p class="">账户信息</p>
+        <p class="app-title">账户信息</p>
         <p class="p-content">
             <label>账户</label>
             <input class="ipt-content" v-bind:value="account" />
@@ -50,7 +61,7 @@
             <input class="ipt-content" v-bind:value="balance" />
         </p>
 
-        <p>
+        <p style="margin:20px 0">
             <button class="btn">充值</button>
         </p>
 
