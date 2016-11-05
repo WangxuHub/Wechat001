@@ -68,6 +68,7 @@
     <Content Include="PayDetail.html" />
     <Content Include="RechargeLog.aspx" />
     <Content Include="Register.html" />
+    <Content Include="Resource\Images\down-detail.png" />
     <Content Include="Resource\Images\chongzhi-icon.png" />
     <Content Include="Resource\Images\daoxun-icon.png" />
     <Content Include="Resource\Images\id-icon.png" />
