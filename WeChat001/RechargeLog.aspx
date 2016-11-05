@@ -10,36 +10,149 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>充值记录</title>
     <uc1:MobileHead runat="server" ID="MobileHead" />
+    
+    <style>
+        body {
+            background:rgb(235,235,235);
+        }
+
+        .searchDiv {
+            margin-top: 9px;
+        }
+
+        .searchDiv p {
+            background: rgb(255,255,255);
+            margin-bottom: 2px;
+            padding: 10px 14px 10px 8px;
+            font-size: 14px;
+        }
+
+        .searchDiv .search-value {
+            float: right;
+            font-size: 12px;
+            color: rgb( 27, 157, 230 );
+        }
+
+        .order {
+            display: inline-block;
+            width: 64px;
+            height: 22px;
+            background: rgb(255,255,255);
+            font-size: 12px;
+            color: rgb( 117, 117, 117 );
+            border: 1px solid rgb(206,206,206);
+            text-align: left;
+            line-height: 18px;
+            padding-left: 6px;
+            border-radius:2px;
+        }
+        .order-desc {
+        
+            margin-left:20px;
+        }
+        .order-icon {
+            display: inline-block;
+            float: right;
+            display: inline-block;
+            width: 20px;
+            height: 9px;    
+
+        }
+
+        .order-asc .order-icon {
+            background: url("/Resource/Images/zhengxun-icon.png") no-repeat;
+            background-size: 12px;
+            margin-top: 5px;
+        }
+
+        .order-asc.select .order-icon {
+            background-position-y: -10px;
+        }
+
+        .order-desc .order-icon {
+            background: url("/Resource/Images/daoxun-icon.png")no-repeat;
+            background-size: 12px;
+            margin-top: 5px;
+        }
+
+        .order-desc.select .order-icon {
+            background-position-y: -10px;
+        }
+
+        #list {
+            list-style:none;
+        }
+        #list li {
+            margin: 0 15px 5px;
+            background-color: #fff;
+            border-radius:4px;
+            padding:11px 15px 15px;
+        }
+
+        .conton-1 {
+            width:80px;
+            display:inline-block;
+        }
+
+        .conton-1 span {
+            font-size:12px;
+            color: rgb( 136, 136, 136 );
+        }
+        .title-1 {
+            font-size:14px;
+            font-weight: 500;
+        }
+
+        .title-2 {
+            color: rgb(136,136,136 );
+            font-size: 14px;
+        }
+        .conton-2 {
+            float:right;
+        }
+
+        .fee {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 6px;
+            display: inline-block;
+            min-width: 105px;
+        }
+    </style>
 </head>
 <body>
     <uc1:MobileTopNav runat="server" ID="MobileTopNav" />
     <div id="vue-app">
-        <div >
+        <div class="searchDiv">
             <p>
                 <label>年份</label>
+                <span class="search-value">2016年</span>
             </p>
             <p>
                 <label>月份</label>
+                <span class="search-value">11月</span>
             </p>
             <p>
                 <label>地点</label>
+                <span class="search-value">莫干山充电站</span>
             </p>
 
         </div>
-        <p>
-            <span>正序</span>
-            <span>倒序</span>
+        <p style="text-align:center;margin:7px 0;">
+            <span class="order order-asc select">正序<span class="order-icon"></span>
+            </span>
+            <span class="order order-desc">倒序<span class="order-icon"></span></span>
         </p>
-        <ul>
+        <ul id="list">
             <template v-for="item in Items">
                 <li>
-                    <div>
-                        <div>充值记录</div>
-                        <span>{{item.week}} {{item.date}}</span>
+                    <div class="conton-1">
+                        <div class="title-1">充值记录</div>
+                        <span>{{item.week}} <br />{{item.date}}</span>
                     </div>
-                    <div>
-                        <div>充值金额</div>
-                        <span>￥{{item.fee}}</span>
+                    <div class="conton-2">
+                        <div class="title-2">充值金额</div>
+                        <span class="fee">￥{{item.fee}}</span>
                     </div>
                 </li>
             </template>
@@ -51,8 +164,10 @@
             data: {
                 Items: [
                  { week: '周五', date: '11月04日', fee: '200.00' },
-                 { week: '周日', date: '11月03日', fee: '100.00' },
-                 { week: '周一', date: '04月04日', fee: '20.00' }
+                 { week: '周五', date: '11月04日', fee: '200.00' },
+                 { week: '周五', date: '11月04日', fee: '200.00' },
+                 { week: '周五', date: '11月04日', fee: '200.00' },
+                 { week: '周五', date: '11月04日', fee: '200.00' }
                 ]
             }
         });

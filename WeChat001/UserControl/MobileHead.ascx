@@ -11,6 +11,6 @@
 <meta name="x5-page-mode" content="app">
 
 
-<link href="/Css/app.css" rel="stylesheet" />
+<link href="/Resource/Css/app.css" rel="stylesheet" />
 <script src="/Scripts/jquery-3.1.1.js"></script>
 <script src="/Scripts/vue.js"></script>
