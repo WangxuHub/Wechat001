@@ -65,6 +65,7 @@
     <Content Include="packages.config" />
     <Content Include="PayDetail.html" />
     <Content Include="RechargeLog.html" />
+    <Content Include="Register.html" />
     <Content Include="Scripts\vue.js" />
     <Content Include="设计稿 切图\images\chongzhi-icon.png" />
     <Content Include="设计稿 切图\images\daoxun-icon.png" />
