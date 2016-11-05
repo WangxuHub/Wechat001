@@ -57,7 +57,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AccountInfo.html" />
+    <Content Include="BatteryLog.html" />
+    <Content Include="BatteryStart.html" />
+    <Content Include="Css\animate.min.css" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="packages.config" />
+    <Content Include="PayDetail.html" />
+    <Content Include="RechargeLog.html" />
+    <Content Include="Scripts\vue.js" />
     <Content Include="设计稿 切图\images\chongzhi-icon.png" />
     <Content Include="设计稿 切图\images\daoxun-icon.png" />
     <Content Include="设计稿 切图\images\id-icon.png" />
@@ -87,8 +95,6 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
-    <Content Include="Scripts\vue.js" />
-    <Content Include="Scripts\vue.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
