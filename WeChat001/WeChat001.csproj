@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,16 +58,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AccountInfo.html" />
-    <Content Include="BatteryLog.html" />
+    <Content Include="AccountInfo.aspx" />
+    <Content Include="BatteryLog.aspx" />
     <Content Include="BatteryStart.html" />
     <Content Include="Css\animate.min.css" />
+    <Content Include="Css\app.css" />
     <Content Include="HtmlPage1.html" />
     <Content Include="packages.config" />
     <Content Include="PayDetail.html" />
-    <Content Include="RechargeLog.html" />
+    <Content Include="RechargeLog.aspx" />
     <Content Include="Register.html" />
     <Content Include="Scripts\vue.js" />
+    <Content Include="UserControl\MobileHead.ascx" />
+    <Content Include="UserControl\MobileTopNav.ascx" />
     <Content Include="设计稿 切图\images\chongzhi-icon.png" />
     <Content Include="设计稿 切图\images\daoxun-icon.png" />
     <Content Include="设计稿 切图\images\id-icon.png" />
@@ -110,7 +114,42 @@
     <Content Include="设计稿 切图\设计稿\09结束充电.psd" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountInfo.aspx.cs">
+      <DependentUpon>AccountInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountInfo.aspx.designer.cs">
+      <DependentUpon>AccountInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatteryLog.aspx.cs">
+      <DependentUpon>BatteryLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatteryLog.aspx.designer.cs">
+      <DependentUpon>BatteryLog.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RechargeLog.aspx.cs">
+      <DependentUpon>RechargeLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RechargeLog.aspx.designer.cs">
+      <DependentUpon>RechargeLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MobileHead.ascx.cs">
+      <DependentUpon>MobileHead.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\MobileHead.ascx.designer.cs">
+      <DependentUpon>MobileHead.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MobileTopNav.ascx.cs">
+      <DependentUpon>MobileTopNav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\MobileTopNav.ascx.designer.cs">
+      <DependentUpon>MobileTopNav.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
@@ -133,7 +172,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>38081</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
