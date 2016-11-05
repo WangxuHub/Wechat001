@@ -60,12 +60,12 @@
   <ItemGroup>
     <Content Include="AccountInfo.aspx" />
     <Content Include="BatteryLog.aspx" />
-    <Content Include="BatteryStart.html" />
+    <Content Include="BatteryStart.aspx" />
+    <Content Include="PayDetail.aspx" />
     <Content Include="Resource\Css\animate.min.css" />
     <Content Include="Resource\Css\app.css" />
     <Content Include="HtmlPage1.html" />
     <Content Include="packages.config" />
-    <Content Include="PayDetail.html" />
     <Content Include="RechargeLog.aspx" />
     <Content Include="Register.html" />
     <Content Include="Resource\Images\down-detail.png" />
@@ -143,6 +143,20 @@
     </Compile>
     <Compile Include="BatteryLog.aspx.designer.cs">
       <DependentUpon>BatteryLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatteryStart.aspx.cs">
+      <DependentUpon>BatteryStart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatteryStart.aspx.designer.cs">
+      <DependentUpon>BatteryStart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayDetail.aspx.cs">
+      <DependentUpon>PayDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayDetail.aspx.designer.cs">
+      <DependentUpon>PayDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RechargeLog.aspx.cs">
