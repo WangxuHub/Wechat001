@@ -58,6 +58,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="设计稿 切图\images\chongzhi-icon.png" />
+    <Content Include="设计稿 切图\images\daoxun-icon.png" />
+    <Content Include="设计稿 切图\images\id-icon.png" />
+    <Content Include="设计稿 切图\images\list_bg.png" />
+    <Content Include="设计稿 切图\images\lock-icon.png" />
+    <Content Include="设计稿 切图\images\login_bg.png" />
+    <Content Include="设计稿 切图\images\nav_bg.png" />
+    <Content Include="设计稿 切图\images\phone-icon.png" />
+    <Content Include="设计稿 切图\images\register-button_bg.png" />
+    <Content Include="设计稿 切图\images\sign-in-button_bg.png" />
+    <Content Include="设计稿 切图\images\tag_bg.png" />
+    <Content Include="设计稿 切图\images\to-here-button_bg.png" />
+    <Content Include="设计稿 切图\images\user-icon.png" />
+    <Content Include="设计稿 切图\images\weixin-icon.png" />
+    <Content Include="设计稿 切图\images\zhengxun-icon.png" />
+    <Content Include="设计稿 切图\设计稿\01进入服务号.png" />
+    <Content Include="设计稿 切图\设计稿\02账号登录.png" />
+    <Content Include="设计稿 切图\设计稿\03账户注册.png" />
+    <Content Include="设计稿 切图\设计稿\04账户信息.png" />
+    <Content Include="设计稿 切图\设计稿\05充值记录.png" />
+    <Content Include="设计稿 切图\设计稿\06充电记录.png" />
+    <Content Include="设计稿 切图\设计稿\07附近充电站.png" />
+    <Content Include="设计稿 切图\设计稿\08充电选择.png" />
+    <Content Include="设计稿 切图\设计稿\09结束充电.png" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -68,6 +92,15 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="设计稿 切图\设计稿\01进入服务号.psd" />
+    <Content Include="设计稿 切图\设计稿\02账号登录.psd" />
+    <Content Include="设计稿 切图\设计稿\03账户注册.psd" />
+    <Content Include="设计稿 切图\设计稿\04账户信息.psd" />
+    <Content Include="设计稿 切图\设计稿\05充值记录.psd" />
+    <Content Include="设计稿 切图\设计稿\06充电记录.psd" />
+    <Content Include="设计稿 切图\设计稿\07附近充电站.psd" />
+    <Content Include="设计稿 切图\设计稿\08充电选择.psd" />
+    <Content Include="设计稿 切图\设计稿\09结束充电.psd" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
