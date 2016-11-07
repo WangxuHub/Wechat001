@@ -59,19 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AccountInfo.aspx" />
-    <Content Include="AccountInfo.html" />
     <Content Include="BatteryLog.aspx" />
-    <Content Include="BatteryLog.html" />
     <Content Include="BatteryStart.aspx" />
-    <Content Include="BatteryStart.html" />
     <Content Include="PayDetail.aspx" />
-    <Content Include="PayDetail.html" />
-    <Content Include="RechargeLog.html" />
     <Content Include="Register.aspx" />
-    <Content Include="Register.html" />
     <Content Include="Resource\Css\animate.min.css" />
     <Content Include="Resource\Css\app.css" />
-    <Content Include="HtmlPage1.html" />
     <Content Include="packages.config" />
     <Content Include="RechargeLog.aspx" />
     <Content Include="Resource\Images\down-detail.png" />
@@ -91,6 +84,7 @@
     <Content Include="Resource\Images\weixin-icon.png" />
     <Content Include="Resource\Images\zhengxun-icon.png" />
     <Content Include="Scripts\vue.js" />
+    <Content Include="Scripts\vue.min.js" />
     <Content Include="UserControl\MobileHead.ascx" />
     <Content Include="UserControl\MobileTopNav.ascx" />
     <Content Include="设计稿 切图\images\chongzhi-icon.png" />

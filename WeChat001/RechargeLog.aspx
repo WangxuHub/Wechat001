@@ -31,6 +31,7 @@
             float: right;
             font-size: 12px;
             color: rgb( 27, 157, 230 );
+            border:none;
         }
 
         .order {
@@ -76,7 +77,7 @@
         }
 
         .order-desc.select .order-icon {
-            background-position-y: -10px;
+            background-position-y: -9px;
         }
 
         #list {
@@ -118,30 +119,54 @@
             display: inline-block;
             min-width: 105px;
         }
+
     </style>
 </head>
 <body>
+    <div></div>
     <uc1:MobileTopNav runat="server" ID="MobileTopNav" />
     <div id="vue-app">
         <div class="searchDiv">
             <p>
                 <label>年份</label>
-                <span class="search-value">2016年</span>
+                <select class="search-value">
+                    <option>2014年</option>
+                    <option>2015年</option>
+                    <option>2016年</option>
+                </select>
             </p>
             <p>
                 <label>月份</label>
-                <span class="search-value">11月</span>
+                <select class="search-value">
+                    <option>1月</option>
+                    <option>2月</option>
+                    <option>3月</option>
+                    <option>4月</option>
+                    <option>5月</option>
+                    <option>6月</option>
+                    <option>7月</option>
+                    <option>8月</option>
+                    <option>9月</option>
+                    <option>10月</option>
+                    <option>11月</option>
+                    <option>12月</option>
+                </select>
             </p>
             <p>
                 <label>地点</label>
-                <span class="search-value">莫干山充电站</span>
+                <select class="search-value">
+                    <option></option>
+                    <option>莫干山充电站</option>
+                    <option>新文路充电站</option>
+                    <option>广业街充电站</option>
+                </select>
             </p>
 
         </div>
         <p style="text-align:center;margin:7px 0;">
-            <span class="order order-asc select">正序<span class="order-icon"></span>
+            <span class="order order-asc" v-bind:class="{select:sortAsc}" v-on:click="querySort(true)">正序<span class="order-icon"></span>
             </span>
-            <span class="order order-desc">倒序<span class="order-icon"></span></span>
+            <span class="order order-desc" v-bind:class="{select:!sortAsc}" v-on:click="querySort(false)">倒序<span class="order-icon"></span></span>
         </p>
         <ul id="list">
             <template v-for="item in Items">
@@ -157,8 +182,10 @@
                 </li>
             </template>
         </ul>
+        <p id="noMore" style="display:none;text-align: center;font-size: 14px;color:rgb(62,25,25);">没有更多数据了……</p>
     </div>
     <script>
+
         var vm = new Vue({
             el: "#vue-app",
             data: {
@@ -168,9 +195,54 @@
                  { week: '周五', date: '11月04日', fee: '200.00' },
                  { week: '周五', date: '11月04日', fee: '200.00' },
                  { week: '周五', date: '11月04日', fee: '200.00' }
-                ]
+                ],
+                sortAsc: true
+            },
+            methods: {
+                querySort: function (isAsc) {
+                    this.sortAsc = isAsc;
+                }
             }
         });
+
+
+        window.loading = false;
+        window.pageIndex = 1;
+        window.pageSize = 20;
+        window.isAll = false;
+        loadData();
+
+        $(window).scroll(function () {
+            var scrollTop = $(this).scrollTop();
+            var scrollHeight = $(document).height();
+            var windowHeight = $(this).height();
+            if (scrollTop + windowHeight <= scrollHeight - 5) {
+                return;
+            }
+            if (window.loading || window.isAll) {
+                return;
+            }
+            loadData();
+        });
+        var tempIndex = 3;
+        function loadData() {
+            if (tempIndex <= 0) {
+                isAll = true;
+                $("#noMore").show();
+                return;
+            }
+            window.loading = true;
+            setTimeout(function () {
+                tempIndex--;
+                window.pageIndex++;
+
+                vm.Items.push(
+                   { week: '周四', date: '10月04日', fee: '200.00' }
+                );
+                window.loading = false;
+            }, 200);
+        }
+
     </script>
 </body>
 </html>
