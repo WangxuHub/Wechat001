@@ -162,7 +162,7 @@
                     <option>新文路充电站</option>
                     <option>广业街充电站</option>
                 </select>
-            </p>
+            </p>  
 
         </div>
             <p style="text-align:center;margin:7px 0;">
