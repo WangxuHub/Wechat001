@@ -1,0 +1,81 @@
+﻿
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>账户信息</title>
+
+
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+
+    <link href="Resource/Css/app.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/vue.js"></script>
+
+    <style>
+        .bot-link {
+            width: 50%;
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div style="height:54px;background-color:rgb(52,52,56);">
+
+    </div>
+    <div id="vue-app">
+        <p class="app-title">账户信息</p>
+        <p class="p-content">
+            <label>账户</label>
+            <span class="ipt-content">{{account}}</span>
+        </p>
+        <p class="p-content">
+            <label>昵称</label>
+            <span class="ipt-content">{{nickName}}</span>
+        </p>
+        <p class="p-content">
+            <label>账户余额</label>
+            <span class="ipt-content">{{balance}}</span>
+        </p>
+
+        <p style="margin:20px 0">
+            <button class="btn">充值</button>
+        </p>
+
+        <p>
+            <div class="bot-link">
+                <a class="app-link" href="RechargeLog.aspx">充值记录</a>
+            </div><div class="bot-link">
+                <a class="app-link" href="BatteryLog.aspx">充电记录</a>
+            </div>
+        </p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#vue-app',
+            data: {
+                account: '胡广',
+                nickName: '小胡',
+                balance:'200.00'
+            }
+        })
+    </script>
+</body>
+</html>

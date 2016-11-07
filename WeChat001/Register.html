@@ -1,0 +1,93 @@
+﻿
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        用户注册
+    </title>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+
+    <link href="Resource/Css/app.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/vue.js"></script>
+
+    <style>
+        #vue-app {
+            width: 80%;
+            margin: auto;
+        }
+
+        .btn {
+            width: 100%;
+            background-color: #04be02;
+            font-size: 15px;
+        }
+
+        .ipt-text {
+            width: 100%;
+            border: none;
+            /*border-bottom:1px solid rgb(217,217,217);*/
+            padding-left: 39px;
+            height: 26px;
+        }
+
+        .p-content {
+            margin: auto;
+            padding: 10px 0 2px;
+        }
+
+        .phone-icon {
+            background: url(/Resource/Images/phone-icon.png) no-repeat 6px;
+            background-size: 16px;
+        }
+
+        .id-icon {
+            background: url(/Resource/Images/id-icon.png) no-repeat 6px;
+            background-size: 16px;
+        }
+
+        .wechat-icon {
+            background: url(/Resource/Images/weixin-icon.png) no-repeat 6px;
+            background-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div style="height:54px;background-color:rgb(52,52,56);">
+
+    </div>
+
+    <div id="vue-app">
+        <p class="app-title">账户注册</p>
+        <p class="p-content">
+            <input class="ipt-text phone-icon" placeholder="手机号" />
+        </p>
+        <p class="p-content">
+            <input class="ipt-text id-icon" placeholder="身份证号" />
+        </p>
+        <p class="p-content">
+            <input class="ipt-text wechat-icon" placeholder="微信号" />
+        </p>
+        <p style="margin-top:20px;">
+            <button class="btn">绑定注册</button>
+        </p>
+    </div>
+</body>
+</html>

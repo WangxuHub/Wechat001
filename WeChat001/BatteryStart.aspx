@@ -61,23 +61,62 @@
         <p class="app-title">请选择充电方式</p>
         <div>
             <div class="col-4">
-                <span class="battery-type select">定额充</span>
+                <span class="battery-type" v-bind:class="{ select: batteryType.fee}" v-on:click="selectType('fee')">定额充</span>
             </div><div class="col-4" style="text-align:center;">
-                <span class="battery-type">定时充</span>
+                <span class="battery-type" v-bind:class="{ select: batteryType.time}" v-on:click="selectType('time')">定时充</span>
             </div><div class="col-4">
-                <span class="battery-type"  style="float:right;">任意充</span>
+                <span class="battery-type" v-bind:class="{ select: batteryType.any}" v-on:click="selectType('any')" style="float:right;">任意充</span>
             </div>
         </div>
         <p style="margin-top: 10px;">
-            <input type="number" placeholder="请输入金额" class="ipt-value"/>
+            <input id="iptBattery" type="number" v-bind:placeholder="batteryPlaceholder" class="ipt-value" v-bind:value="batteryValue"/>
         </p>
 
-        <p class="info">您的账户余额100.00,将一次性充完</p>
+        <p class="info"><%--您的账户余额100.00,将一次性充完--%></p>
         <p>
             <button class="btn">开始充电</button>
         </p>
         <p style="text-align: center; margin-top: 10px;"><a class="app-link">当前余额不足,进入充值</a></p>
 
     </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#vue-app",
+            data: {
+                batteryType: {
+                    fee: true, time: false, any: false
+                },
+                batteryValue: '',
+                batteryPlaceholder:'请输入金额'
+            },
+            methods: {
+                selectType: function (type) {
+                    if (this._data.batteryType[type]) {
+                        return false;
+                    }
+                    else {
+                        //this._data.batteryValue = '';
+                        $("#iptBattery").css('visibility', 'visible').val('');
+                        if (type == 'fee') {
+                            this._data.batteryPlaceholder = '请输入金额';
+                        }
+                        else if (type == 'time') {
+                            this._data.batteryPlaceholder = '请输入时间(分钟)';
+
+                        }
+                        else if (type == 'any') {
+                            $("#iptBattery").css('visibility', 'hidden');
+                        }
+                    }
+
+                    this._data.batteryType.fee = false;
+                    this._data.batteryType.time = false;
+                    this._data.batteryType.any = false;
+                    this._data.batteryType[type] = true;
+                }
+            }
+        });
+</script>
 </body>
 </html>

@@ -59,10 +59,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AccountInfo.aspx" />
+    <Content Include="AccountInfo.html" />
     <Content Include="BatteryLog.aspx" />
+    <Content Include="BatteryLog.html" />
     <Content Include="BatteryStart.aspx" />
+    <Content Include="BatteryStart.html" />
     <Content Include="PayDetail.aspx" />
+    <Content Include="PayDetail.html" />
+    <Content Include="RechargeLog.html" />
     <Content Include="Register.aspx" />
+    <Content Include="Register.html" />
     <Content Include="Resource\Css\animate.min.css" />
     <Content Include="Resource\Css\app.css" />
     <Content Include="HtmlPage1.html" />
