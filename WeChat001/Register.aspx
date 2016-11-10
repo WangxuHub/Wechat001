@@ -50,8 +50,7 @@
 </head>
 <body>
     <uc1:MobileTopNav runat="server" ID="MobileTopNav" />
-
-    <div id="vue-app">
+       <div id="vue-app">
         <p class="app-title">账户注册</p>
         <p class="p-content">
             <input class="ipt-text phone-icon" placeholder="手机号"/>
@@ -66,5 +65,6 @@
             <button class="btn">绑定注册</button>
         </p>
     </div>
+    
 </body>
 </html>

@@ -62,6 +62,7 @@
     <Content Include="BatteryLog.aspx" />
     <Content Include="BatteryStart.aspx" />
     <Content Include="PayDetail.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Resource\Css\animate.min.css" />
     <Content Include="Resource\Css\app.css" />
@@ -165,6 +166,13 @@
     </Compile>
     <Compile Include="RechargeLog.aspx.designer.cs">
       <DependentUpon>RechargeLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
